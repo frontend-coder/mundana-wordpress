@@ -33,13 +33,24 @@ NAVBAR
 --------------------------------------->
   <nav class="topnav navbar navbar-expand-lg navbar-light bg-white fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="./index.html"><strong>Mundana</strong></a>
+      <a class="navbar-brand" href="<?php echo home_url('/' ); ?>"><strong><?php bloginfo( 'name' );?></strong></a>
       <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor02"
         aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="navbar-collapse collapse" id="navbarColor02" style="">
-        <ul class="navbar-nav mr-auto d-flex align-items-center">
+
+        <?php wp_nav_menu( array(
+	'theme_location' => 'header_menu',
+	'container' => false,
+	'menu_class' => 'navbar-nav mr-auto d-flex align-items-center',
+	'walker' => new  Mundana_Menu(), 
+	) );
+
+?>
+
+
+        <!-- <ul class="navbar-nav mr-auto d-flex align-items-center">
           <li class="nav-item">
             <a class="nav-link" href="./index.html">Intro <span class="sr-only">(current)</span></a>
           </li>
@@ -70,7 +81,13 @@ NAVBAR
             <a class="nav-link" href="https://www.wowthemes.net/mundana-free-html-bootstrap-template/">Get this
               Theme</a>
           </li>
-        </ul>
+        </ul> -->
+
+
+        <?php get_search_form(); ?>
+
+
+
       </div>
     </div>
   </nav>
@@ -103,9 +120,3 @@ HEADER
       </div>
     </div>
   </div>
-  <!-- End Header -->
-
-
-
-
-

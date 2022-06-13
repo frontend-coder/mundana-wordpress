@@ -49,7 +49,7 @@ function mundana_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Primary', 'mundana' ),
+			'header_menu' => esc_html__( 'Header menu', 'mundana' ),
 		)
 	);
 
@@ -138,6 +138,7 @@ add_action( 'widgets_init', 'mundana_widgets_init' );
 
 
 require get_template_directory() . '/functions/get-enqueue.php';
+require get_template_directory() . '/inc/Mundana_Menu.php';
 
 /**
  * Implement the Custom Header feature.
