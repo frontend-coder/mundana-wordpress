@@ -52,8 +52,9 @@ if(count($featured_posts ) >1) {
             <?php the_content(''); ?>
           </p>
           <div>
-            <small class="d-block"><a class="text-muted" href="./author.html">Favid Rick</a></small>
-            <small class="text-muted">Dec 12 &middot; 5 min read</small>
+            <small class="d-block"><?php the_author(); ?></small>
+            <!-- <small class="text-muted">Dec 12 &middot; 5 min read</small> -->
+            <?php echo mundana_post_data($post->ID); ?>
           </div>
         </div>
       </div>
@@ -79,8 +80,9 @@ if(count($featured_posts ) >1) {
             <?php the_content(); ?>
           </p>
           <div>
-            <small class="d-block"><a class="text-muted" href="./author.html">Favid Rick</a></small>
-            <small class="text-muted">Dec 12 &middot; 5 min read</small>
+            <small class="d-block"><?php the_author(); ?></small>
+            <!-- <small class="text-muted">Dec 12 &middot; 5 min read</small> -->
+            <?php echo mundana_post_data($post->ID); ?>
           </div>
         </div>
       </div>
@@ -99,9 +101,10 @@ if(count($featured_posts ) >1) {
               <a class="text-dark" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
             </h2>
             <div class=" card-text text-muted small">
-              Jake Bittle in LOVE/HATE
+              <?php the_author(); ?>
             </div>
-            <small class="text-muted">Dec 12 &middot; 5 min read</small>
+            <!-- <small class="text-muted">Dec 12 &middot; 5 min read</small> -->
+            <?php echo mundana_post_data($post->ID); ?>
           </div>
         </div>
         <?php endforeach;  wp_reset_postdata(); ?>
@@ -123,7 +126,9 @@ if(count($featured_posts ) >1) {
   <div class="row justify-content-between">
     <div class="col-md-8">
       <h5 class="font-weight-bold spanborder"><span>All Stories</span></h5>
+
       <div class="mb-3 d-flex justify-content-between">
+
         <div class="pr-3">
           <h2 class="mb-1 h4 font-weight-bold">
             <a class="text-dark" href="./article.html">Nearly 200 Great Barrier Reef coral species also live in
@@ -139,8 +144,10 @@ if(count($featured_posts ) >1) {
           </div>
           <small class="text-muted">Dec 12 &middot; 5 min read</small>
         </div>
+
         <img height="120" src="./assets/img/demo/blog8.jpg" />
       </div>
+
       <div class="mb-3 d-flex justify-content-between">
         <div class="pr-3">
           <h2 class="mb-1 h4 font-weight-bold">
@@ -157,6 +164,7 @@ if(count($featured_posts ) >1) {
         </div>
         <img height="120" src="./assets/img/demo/1.jpg" />
       </div>
+
       <div class="mb-3 d-flex justify-content-between">
         <div class="pr-3">
           <h2 class="mb-1 h4 font-weight-bold">
@@ -174,7 +182,10 @@ if(count($featured_posts ) >1) {
         </div>
         <img height="120" src="./assets/img/demo/5.jpg" />
       </div>
+
     </div>
+
+
     <div class="col-md-4 pl-4">
       <h5 class="font-weight-bold spanborder"><span>Popular</span></h5>
       <ol class="list-featured">
@@ -214,6 +225,7 @@ if(count($featured_posts ) >1) {
         </li>
       </ol>
     </div>
+
   </div>
 </div>
 

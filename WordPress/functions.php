@@ -143,6 +143,22 @@ require get_template_directory() . '/inc/Mundana_Menu.php';
 //require get_template_directory() . '/functions/admin-panel.php';
 require get_template_directory() . '/functions/admin-metaboxes.php';
 
+/**custom date on the pages of site */
+
+function mundana_post_data($post_id) {
+	$date= get_the_time('M j');
+	$read_minutes = get_post_meta($post_id, 'read_minutes', true);
+	$out = '<small class="text-muted">';
+	$out .= $date;
+if($read_minutes) {
+	$out .= '&middot; ' .$read_minutes. __(' min read', 'mundana');
+}
+	$out .= '</small>';
+return $out;
+}
+
+
+
 /**
  * Implement the Custom Header feature.
  */
