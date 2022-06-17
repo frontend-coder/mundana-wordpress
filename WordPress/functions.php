@@ -140,6 +140,9 @@ add_action( 'widgets_init', 'mundana_widgets_init' );
 require get_template_directory() . '/functions/get-enqueue.php';
 require get_template_directory() . '/inc/Mundana_Menu.php';
 
+//require get_template_directory() . '/functions/admin-panel.php';
+require get_template_directory() . '/functions/admin-metaboxes.php';
+
 /**
  * Implement the Custom Header feature.
  */
