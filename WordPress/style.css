@@ -21,3 +21,71 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
+
+.page-numbers {
+  padding-top: 30px;
+  list-style: none;
+  display: flex;
+}
+.page-numbers li {
+  border: 1px solid #eee;
+}
+.page-numbers span,
+.page-numbers a {
+  padding: 10px;
+  font-size: 16px;
+}
+
+ul.page-numbers {
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+  border-radius: 0.25rem;
+  justify-content: center !important;
+}
+
+ul.page-numbers li:first-child .page-link {
+  margin-left: 0;
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+ul.page-numbers li:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
+a.page-numbers,
+span.current {
+  position: relative;
+  display: block;
+  padding: 0.5rem 0.75rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  color: #03a87c;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  text-decoration: none;
+}
+
+span.current {
+  color: #fff;
+  background-color: #03a87c;
+  border-color: #03a87c;
+  cursor: default;
+}
+
+span.dots {
+  position: relative;
+  display: block;
+  padding: 0.5rem 0.75rem;
+  margin-left: -1px;
+  line-height: 1.25;
+  color: #03a87c;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  cursor: default;
+}
+
+nav.navigation {
+  width: 100%;
+}
