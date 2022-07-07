@@ -19,15 +19,9 @@ Main
   <div class="container mt-5 mb-5">
     <div class="row">
       <div class="col-md-8">
-        <h5 class="font-weight-bold spanborder">
           <?php get_template_part( 'template-parts/futured-category-post' ); ?>
 
-
-
-
-
-          <h5 class="font-weight-bold spanborder"><span>Latest</span></h5>
-
+          <h5 class="font-weight-bold spanborder"><span><?php _e('Latest','mundana'); ?></span></h5>
 
           <?php if ( have_posts() ) : ?>
           <?php while ( have_posts() ) : 	the_post(); ?>
@@ -43,16 +37,7 @@ Main
           <p> <?php _e('No posts yet', 'mundana') ?> </p>
           <?php endif; ?>
 
-
-
-
-
-
       </div>
-
-
-
-
 
 
       <div class="col-md-4 pl-4">

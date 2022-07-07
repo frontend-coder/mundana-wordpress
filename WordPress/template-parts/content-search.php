@@ -9,27 +9,18 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php
-			mundana_posted_on();
-			mundana_posted_by();
-			?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
-
-	<?php mundana_post_thumbnail(); ?>
-
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
-
-	<footer class="entry-footer">
-		<?php mundana_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+<div <?php post_class('mb-3 d-flex justify-content-between 9'); ?>>
+  <div class="pr-3">
+    <h2 class="mb-1 h4 font-weight-bold">
+      <a class="text-dark" href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+    </h2>
+    <div>
+      <?php the_excerpt(  ); ?>
+    </div>
+    <div class="card-text text-muted small">
+      <?php the_author() . _e(' in category ', 'mundana ') . the_category(', ')  ; ?>
+    </div>
+    <small class="text-muted"> <?php echo mundana_post_data($post->ID); ?> </small>
+  </div>
+  <img height="120" src="<?php the_post_thumbnail_url( 'full' ) ?>" />
+</div>
