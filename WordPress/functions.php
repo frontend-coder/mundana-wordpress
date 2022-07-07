@@ -157,6 +157,23 @@ if($read_minutes) {
 return $out;
 }
 
+function mundana_data($post_id) {
+	return $date= get_the_time('M j');
+}
+
+function munduna_get_human_time() {
+$time_diff = human_time_diff( get_post_time('U'), current_time( 'timestamp' ));
+return $time_diff  . __(' ago.', 'mundana');
+}
+
+function mundana_single_readtime($post_id)
+{
+	$read_minutess = get_post_meta($post_id, 'read_minutes', true);
+	if($read_minutess) {
+		$out_single = '&middot; ' . $read_minutess . __(' min read', 'mundana');
+return $out_single;
+	}
+}
 
 
 /**
