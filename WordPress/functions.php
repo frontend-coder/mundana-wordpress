@@ -45,7 +45,7 @@ function mundana_setup() {
 		* @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		*/
 	add_theme_support( 'post-thumbnails' );
-
+	add_theme_support( 'post-formats', array('image','video') );
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
@@ -174,6 +174,16 @@ function mundana_single_readtime($post_id)
 return $out_single;
 	}
 }
+
+
+
+function mundana_media(  $types = array() ) {
+	$getVideo = apply_filters( 'the_content', get_the_content() ) ;
+$items = get_media_embedded_in_content( $getVideo, $types );
+return $items[0] ?? $items;
+}
+
+
 
 
 /**
