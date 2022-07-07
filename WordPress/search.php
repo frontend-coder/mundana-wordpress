@@ -10,16 +10,13 @@
 get_header();
 ?>
 
-
 <main id="primary" class="site-main">
-
   <!--------------------------------------
 Main
 --------------------------------------->
   <div class="container mt-5 mb-5">
     <div class="row">
       <div class="col-md-8">
-
 
         <h5 class="font-weight-bold spanborder"><span><?php _e('Search by query: ','mundana'); ?></span>
           <?php echo get_search_query(); ?>
@@ -41,54 +38,14 @@ Main
 
       </div>
 
-
       <div class="col-md-4 pl-4">
         <div class="sticky-top">
-          <h5 class="font-weight-bold spanborder">
-            <span>Popular in Science</span>
-          </h5>
-          <ol class="list-featured">
-            <li>
-              <span>
-                <h6 class="font-weight-bold">
-                  <a href="./article.html" class="text-dark">Did Supernovae Kill Off Large Ocean Animals?</a>
-                </h6>
-                <p class="text-muted">Jake Bittle in SCIENCE</p>
-              </span>
-            </li>
-            <li>
-              <span>
-                <h6 class="font-weight-bold">
-                  <a href="./article.html" class="text-dark">Humans Reversing Climate Clock: 50 Million Years</a>
-                </h6>
-                <p class="text-muted">Jake Bittle in SCIENCE</p>
-              </span>
-            </li>
-            <li>
-              <span>
-                <h6 class="font-weight-bold">
-                  <a href="./article.html" class="text-dark">Unprecedented Views of the Birth of Planets</a>
-                </h6>
-                <p class="text-muted">Jake Bittle in SCIENCE</p>
-              </span>
-            </li>
-            <li>
-              <span>
-                <h6 class="font-weight-bold">
-                  <a href="./article.html" class="text-dark">Effective New Target for Mood-Boosting Brain Stimulation
-                    Found</a>
-                </h6>
-                <p class="text-muted">Jake Bittle in SCIENCE</p>
-              </span>
-            </li>
-          </ol>
+          <?php get_sidebar();?>
         </div>
       </div>
+
     </div>
   </div>
-
-
-
 
   <div class="container pt-4 pb-4">
     <div class="border p-5 bg-lightblue">
@@ -119,11 +76,6 @@ Main
   </div>
   <!-- End Main -->
 </main><!-- #main -->
-
-
-
-
-
 
 <?php
 // get_sidebar();

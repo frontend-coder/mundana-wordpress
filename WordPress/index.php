@@ -28,7 +28,6 @@ if(count($featured_posts ) >1) {
 }
 ?>
 
-
 <?php if(!empty($featured_posts)) : ?>
 <div class="container pt-4 pb-4">
   <div class="row">
@@ -87,16 +86,12 @@ if(count($featured_posts ) >1) {
               <?php the_author() . _e(' in category ', 'mundana') . the_category(', ')  ; ?></small>
             <!-- <small class="text-muted">Dec 12 &middot; 5 min read</small> -->
             <?php echo mundana_post_data($post->ID); ?>
-
           </div>
-
-
 
         </div>
       </div>
       <?php wp_reset_postdata(); ?>
     </div>
-
 
     <div class="col-lg-6">
       <div class="flex-md-row mb-4 box-shadow h-xl-300">
@@ -117,14 +112,9 @@ if(count($featured_posts ) >1) {
         </div>
         <?php endforeach;  wp_reset_postdata(); ?>
 
-
-
-
       </div>
     </div>
     <?php endif; ?>
-
-
 
   </div>
 </div>
@@ -148,61 +138,16 @@ if(count($featured_posts ) >1) {
     else:  ?>
       <p><?php _e('No posts yet', 'mundana'); ?></p>
       <?php endif; ?>
-
-
-
-
     </div>
 
-
     <div class="col-md-4 pl-4">
-      <h5 class="font-weight-bold spanborder"><span>Popular</span></h5>
-      <ol class="list-featured">
-        <li>
-          <span>
-            <h6 class="font-weight-bold">
-              <a href="./article.html" class="text-dark">Did Supernovae Kill Off Large Ocean Animals?</a>
-            </h6>
-            <p class="text-muted">Jake Bittle in SCIENCE</p>
-          </span>
-        </li>
-        <li>
-          <span>
-            <h6 class="font-weight-bold">
-              <a href="./article.html" class="text-dark">Humans Reversing Climate Clock: 50 Million Years</a>
-            </h6>
-            <p class="text-muted">Jake Bittle in SCIENCE</p>
-          </span>
-        </li>
-        <li>
-          <span>
-            <h6 class="font-weight-bold">
-              <a href="./article.html" class="text-dark">Unprecedented Views of the Birth of Planets</a>
-            </h6>
-            <p class="text-muted">Jake Bittle in SCIENCE</p>
-          </span>
-        </li>
-        <li>
-          <span>
-            <h6 class="font-weight-bold">
-              <a href="./article.html" class="text-dark">Effective New Target for Mood-Boosting Brain
-                Stimulation
-                Found</a>
-            </h6>
-            <p class="text-muted">Jake Bittle in SCIENCE</p>
-          </span>
-        </li>
-      </ol>
+      <?php get_sidebar();?>
     </div>
 
   </div>
 </div>
 
-
-
-
 <!-- #main -->
 
-<?php
-
+<?php 
 get_footer();

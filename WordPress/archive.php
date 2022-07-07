@@ -19,90 +19,37 @@ Main
   <div class="container mt-5 mb-5">
     <div class="row">
       <div class="col-md-8">
-          <?php get_template_part( 'template-parts/futured-category-post' ); ?>
+        <?php get_template_part( 'template-parts/futured-category-post' ); ?>
 
-          <h5 class="font-weight-bold spanborder"><span><?php _e('Latest','mundana'); ?></span></h5>
+        <h5 class="font-weight-bold spanborder"><span><?php _e('Latest','mundana'); ?></span></h5>
 
-          <?php if ( have_posts() ) : ?>
-          <?php while ( have_posts() ) : 	the_post(); ?>
+        <?php if ( have_posts() ) : ?>
+        <?php while ( have_posts() ) : 	the_post(); ?>
 
-          <?php get_template_part( 'template-parts/content', get_post_format() ); ?>
+        <?php get_template_part( 'template-parts/content', get_post_format() ); ?>
 
-          <?php endwhile; ?>
+        <?php endwhile; ?>
 
-          <?php the_posts_pagination(array(
+        <?php the_posts_pagination(array(
 						'type' => 'list',
 						)); ?>
-          <?php else : ?>
-          <p> <?php _e('No posts yet', 'mundana') ?> </p>
-          <?php endif; ?>
+        <?php else : ?>
+        <p> <?php _e('No posts yet', 'mundana') ?> </p>
+        <?php endif; ?>
 
       </div>
 
 
       <div class="col-md-4 pl-4">
         <div class="sticky-top">
-          <h5 class="font-weight-bold spanborder">
-            <span>Popular in Science</span>
-          </h5>
-          <ol class="list-featured">
-            <li>
-              <span>
-                <h6 class="font-weight-bold">
-                  <a href="./article.html" class="text-dark">Did Supernovae Kill Off Large Ocean Animals?</a>
-                </h6>
-                <p class="text-muted">Jake Bittle in SCIENCE</p>
-              </span>
-            </li>
-            <li>
-              <span>
-                <h6 class="font-weight-bold">
-                  <a href="./article.html" class="text-dark">Humans Reversing Climate Clock: 50 Million Years</a>
-                </h6>
-                <p class="text-muted">Jake Bittle in SCIENCE</p>
-              </span>
-            </li>
-            <li>
-              <span>
-                <h6 class="font-weight-bold">
-                  <a href="./article.html" class="text-dark">Unprecedented Views of the Birth of Planets</a>
-                </h6>
-                <p class="text-muted">Jake Bittle in SCIENCE</p>
-              </span>
-            </li>
-            <li>
-              <span>
-                <h6 class="font-weight-bold">
-                  <a href="./article.html" class="text-dark">Effective New Target for Mood-Boosting Brain Stimulation
-                    Found</a>
-                </h6>
-                <p class="text-muted">Jake Bittle in SCIENCE</p>
-              </span>
-            </li>
-          </ol>
+
+          <?php get_sidebar();?>
+
         </div>
       </div>
+
     </div>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   <div class="container pt-4 pb-4">
     <div class="border p-5 bg-lightblue">
