@@ -104,7 +104,7 @@ if(count($featured_posts ) >1) {
               <a class="text-dark" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
             </h2>
             <div class=" card-text text-muted small">
-              <?php the_author() . _e(' in category ', 'mundana ') . the_category(', ')  ; ?>
+              <?php the_author() . _e(' in category ', 'mundana') . the_category(', ')  ; ?>
             </div>
             <!-- <small class="text-muted">Dec 12 &middot; 5 min read</small> -->
             <?php echo mundana_post_data($post->ID); ?>

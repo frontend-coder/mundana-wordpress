@@ -19,11 +19,13 @@
         <script>
         document.write(new Date().getFullYear())
         </script>
-        . All rights reserved.
+        . <?php _e('All rights reserved.', 'mundana') ?>
       </div>
       <div>
-        Made with <a target="_blank" class="text-secondary font-weight-bold"
-          href="https://www.wowthemes.net/mundana-free-html-bootstrap-template/">Mundana Theme</a> by WowThemes.net.
+        <?php _e('Made with ', 'mundana') ?> <a target="_blank" class="text-secondary font-weight-bold"
+          href="https://www.wowthemes.net/mundana-free-html-bootstrap-template/">
+          <?php _e('Mundana Theme ', 'mundana') ?> </a>
+        <?php _e('by', 'mundana') ?> WowThemes.net.
       </div>
     </div>
   </footer>

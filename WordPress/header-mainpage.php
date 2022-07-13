@@ -102,15 +102,14 @@ HEADER
         <div class="row justify-content-between">
           <div class="col-md-6 pt-6 pb-6 align-self-center">
             <h1 class="secondfont mb-3 font-weight-bold">
-              Mundana is an HTML Bootstrap Template for Professional Blogging
+              <?php esc_html_e('Mundana is an HTML Bootstrap Template for Professional Blogging', 'mundana'); ?>
+
             </h1>
             <p class="mb-3">
-              Beautifully crafted with the latest technologies, SASS &
-              Bootstrap 4.1.3, Mundana is the perfect design for your
-              professional blog. Homepage, post article and category layouts
-              available.
+              <?php esc_html_e('Beautifully crafted with the latest technologies, SASS & Bootstrap 4.1.3, Mundana is the perfect design for your professional blog. Homepage, post article and category layouts available.', 'mundana'); ?>
+
             </p>
-            <a href="./article.html" class="btn btn-dark">Read More</a>
+            <a href="./article.html" class="btn btn-dark"><?php _e( 'Read More', 'mundana' ); ?> </a>
           </div>
           <div class="col-md-6 d-none d-md-block pr-0" style="
                 background-size: cover;
